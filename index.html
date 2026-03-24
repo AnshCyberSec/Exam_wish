@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🌌 Best Wishes | Exam Special</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cosmic Background -->
+    <canvas id="starCanvas"></canvas>
+    
+    <!-- Floating Nebula -->
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    
+    <!-- Main Layout - Split Screen -->
+    <div class="split-layout">
+        
+        <!-- Left Side - Interactive Portal -->
+        <div class="portal-side" id="portalSide">
+            <div class="portal-container">
+                <div class="portal-ring">
+                    <div class="portal-core">
+                        <div class="pulse-ring"></div>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <h2 class="portal-title">Hey <span>Buddy</span>!</h2>
+                
+                <div class="cosmic-button-wrapper">
+                    <button class="cosmic-btn" id="cosmicBtn">
+                        <div class="btn-front">
+                            <span>Click It</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="btn-back">
+                            <span>Open</span>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="cosmic-hint">
+                    <div class="energy-line"></div>
+                    <p>✨ bas ek click ✨</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Side - Hidden Message -->
+        <div class="message-side" id="messageSide">
+            <div class="message-container">
+                <button class="close-cosmic" id="closeCosmic">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                
+                <div class="cosmic-message">
+                    <div class="message-glow"></div>
+                    
+                    <div class="cosmic-header">
+                        <div class="asteroid-badge">
+                            <i class="fas fa-envelope"></i>
+                            <span>FOR YOU</span>
+                        </div>
+                        <div class="energy-wave"></div>
+                    </div>
+                    
+                    <div class="typewriter-area">
+                        <div id="typewriterText" class="typewriter"></div>
+                        <div class="cursor-blink"></div>
+                    </div>
+                    
+                    <div class="cosmic-footer">
+                        <div class="signature-cosmic">
+                            <div class="sig-line"></div>
+                            <p class="sig-text">—Your well-wisher ✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Sound Effect -->
+    <audio id="portalSound" preload="auto">
+        <source src="audio/trending-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
