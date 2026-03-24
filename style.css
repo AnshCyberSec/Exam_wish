@@ -223,9 +223,8 @@ body {
     font-weight: 800;
 }
 
-/* Cosmic Button - 3D Flip */
+/* Cosmic Button - FIXED: No 3D Flip, Simple Click */
 .cosmic-button-wrapper {
-    perspective: 1000px;
     margin-bottom: 30px;
 }
 
@@ -233,20 +232,26 @@ body {
     position: relative;
     width: 200px;
     height: 60px;
-    background: transparent;
+    background: linear-gradient(135deg, #ff3366, #cc33ff);
     border: none;
+    border-radius: 30px;
     cursor: pointer;
-    transform-style: preserve-3d;
-    transition: transform 0.4s;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 51, 102, 0.3);
 }
 
 .cosmic-btn:hover {
-    transform: rotateX(10deg);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 51, 102, 0.5);
 }
 
-.cosmic-btn .btn-front,
-.cosmic-btn .btn-back {
-    position: absolute;
+.cosmic-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
+}
+
+.btn-front {
     width: 100%;
     height: 100%;
     display: flex;
@@ -255,34 +260,21 @@ body {
     gap: 12px;
     font-size: 18px;
     font-weight: 600;
-    border-radius: 30px;
-    backface-visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.cosmic-btn .btn-front {
-    background: linear-gradient(135deg, #ff3366, #cc33ff);
     color: white;
-    transform: rotateX(0deg);
-    box-shadow: 0 8px 20px rgba(255, 51, 102, 0.3);
+    background: transparent;
 }
 
-.cosmic-btn .btn-back {
-    background: linear-gradient(135deg, #33ccff, #3366ff);
-    color: white;
-    transform: rotateX(180deg);
+.btn-front i {
+    transition: transform 0.3s ease;
 }
 
-.cosmic-btn:active {
-    transform: rotateX(180deg);
+.cosmic-btn:hover .btn-front i {
+    transform: translateX(5px);
 }
 
-.cosmic-btn:active .btn-front {
-    transform: rotateX(180deg);
-}
-
-.cosmic-btn:active .btn-back {
-    transform: rotateX(360deg);
+/* Remove btn-back completely */
+.btn-back {
+    display: none;
 }
 
 /* Cosmic Hint */
@@ -424,14 +416,15 @@ body {
     height: 2px;
     background: linear-gradient(90deg, transparent, #ff3366, #33ccff, transparent);
     animation: waveMove 2s linear infinite;
+    background-size: 200% 100%;
 }
 
 @keyframes waveMove {
     0% {
-        background-position: -200px 0;
+        background-position: -200% 0;
     }
     100% {
-        background-position: 200px 0;
+        background-position: 200% 0;
     }
 }
 
