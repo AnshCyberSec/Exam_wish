@@ -15,7 +15,7 @@ Tension lene ka nahi, dene ka hai 😏
 
 Aur haan… tum kar logi yaar, mujhe 110% biswas hai 💯
 
-Ab jao… hero wali entry maaro exam me 😄  
+Ab jao… heroine wali entry maaro exam me 😄  
 Baad me full update chahiye`;
 
 // Sound played flag (only once)
